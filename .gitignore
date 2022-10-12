@@ -5,6 +5,7 @@
 *.npz
 *.pyc
 *.bin
+*.vdb
 waveletNoiseTile.bin
 waveletNoiseTileDouble.bin
 build
