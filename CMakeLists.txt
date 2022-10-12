@@ -13,6 +13,8 @@
 project (MantaFlow)
 cmake_minimum_required(VERSION 2.8)
 
+SET(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/tools/cmake/")
 set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS true)
 set(VERBOSE 1)
@@ -335,6 +337,7 @@ if(MT)
 		if(DEBUG)
 			add_definitions( -DTBB_USE_DEBUG=1 )
 		endif()
+		#list(APPEND INCLUDE_PATHS "/usr/include")
 		list(APPEND F_LIBS tbb)
 		if(WIN32)
 			find_package(TBB REQUIRED)
